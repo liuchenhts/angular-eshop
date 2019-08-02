@@ -1,1 +1,14 @@
-<p>list works!</p>
+<div class="col-lg-4" *ngFor="let product of products$">
+  <div class="product">
+    <div class="top">
+      <a routerLink="/products/{{product.id}}" routerLinkActive="router-link-active">{{ product.name }}</a>
+      <div>
+        <p>$AUD {{ product.price }}</p>
+      </div>
+    </div>
+    <div class="bottom">
+      <a routerLink="/products/{{product.id}}">update</a>
+      <input class="btn btn-danger center-block pull-right " type="button" data-toggle="modal" value="Delete Product" />
+    </div>
+  </div>
+</div>

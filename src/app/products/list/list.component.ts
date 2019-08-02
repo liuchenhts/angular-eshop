@@ -1,3 +1,6 @@
+import { Product } from './../domain/product';
+import { Observable } from 'rxjs';
+import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  products$: Product[];
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
+    this.getProducts();
+  }
+
+  getProducts() {
+    this.productService.getProducts().subscribe((products) => {
+      this.products$ = products;
+    });
   }
 
 }
