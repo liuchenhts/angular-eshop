@@ -1,1 +1,11 @@
-<p>create works!</p>
+<div>
+  <label>Name:
+    <input #productName />
+  </label>
+  <label>Price
+    <input #productPrice />
+  </label>
+  <button (click)="add(productName.value, productPrice.value); productName.value=''; productPrice.value='';">
+    Create Product
+  </button>
+</div>

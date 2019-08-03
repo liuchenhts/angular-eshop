@@ -13,4 +13,9 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return of(PRODUCTS);
   }
+
+  add(product: Product): Observable<Product> {
+    PRODUCTS.push(product);
+    return of(product);
+  }
 }
