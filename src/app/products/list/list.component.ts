@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  products$: Product[];
+  products$: Observable<Product[]>;
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
@@ -18,9 +18,10 @@ export class ListComponent implements OnInit {
   }
 
   getProducts() {
-    this.productService.getProducts().subscribe((products) => {
-      this.products$ = products;
-    });
+    this.products$ = this.productService.getProducts();
+    // this.productService.getProducts().subscribe((products) => {
+    //   this.products$ = products;
+    // });
   }
 
   delete(id: number) {

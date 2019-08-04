@@ -11,11 +11,12 @@ import { Location } from '@angular/common';
 })
 export class DetailComponent implements OnInit {
 
-  @Input() product: Product;
+  product: Product;
 
-  constructor(private route: ActivatedRoute,
-              private productService: ProductService,
-              private location: Location) {}
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService,
+    private location: Location) { }
 
   ngOnInit() {
     this.getProduct();
