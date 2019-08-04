@@ -8,7 +8,7 @@
     </div>
     <div class="bottom">
       <a routerLink="/products/{{product.id}}">update</a>
-      <input class="btn btn-danger center-block pull-right " type="button" data-toggle="modal" value="Delete Product" />
+      <button (click)="delete(product.id)" class="btn btn-danger center-block pull-right ">Delete</button>
     </div>
   </div>
 </div>

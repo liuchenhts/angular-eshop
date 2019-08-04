@@ -23,4 +23,10 @@ export class ListComponent implements OnInit {
     });
   }
 
+  delete(id: number) {
+    this.productService.delete(id).subscribe((product) => {
+      // alert('deleted');
+    });
+  }
+
 }
