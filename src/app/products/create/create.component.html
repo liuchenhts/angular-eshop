@@ -1,10 +1,14 @@
 <div>
-  <label>Name:
-    <input #productName />
-  </label>
-  <label>Price
-    <input #productPrice />
-  </label>
+  <div>
+    <label>Name:
+      <input #productName />
+    </label>
+  </div>
+  <div>
+    <label>Price:
+      <input #productPrice />
+    </label>
+  </div>
   <button (click)="add(productName.value, productPrice.value); productName.value=''; productPrice.value='';">
     Create Product
   </button>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './products/list/list.component';
 import { CreateComponent } from './products/create/create.component';
+import { DetailComponent } from './products/detail/detail.component';
 
 
 const routes: Routes = [
@@ -10,7 +11,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'products/list', component: ListComponent },
   { path: 'products/create', component: CreateComponent },
-  // { path: 'detail/:id', component: HeroDetailComponent },
+  { path: 'products/:id', component: DetailComponent },
 ];
 
 @NgModule({

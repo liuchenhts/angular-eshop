@@ -19,7 +19,7 @@ export class CreateComponent implements OnInit {
     name = name.trim();
     if (!name) { return; }
     const id: number = this.genId();
-    const createdDate = new Date();
+    const createdDate: Date = new Date();
 
     this.productService.add({ id, name, price, createdDate } as Product)
       .subscribe((product: Product) => {
